@@ -1,0 +1,95 @@
+section.section-where {
+
+    & .location-card {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        // top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        overflow: hidden;
+        @include shadows2;
+
+        width: $loc-card-width;
+        height: $loc-card-height;
+        background-color: rgba($pk-blue, .7);
+        border-radius: 10px;
+
+    }
+
+    & .loc {
+        position: relative;
+        flex-grow: 1;
+        transition: all 0.4s ease;
+        z-index: 1;
+
+        &:hover {
+            flex-grow: 2;
+            color: black;
+        }
+
+        &.hidden {
+            flex-shrink: 0.0000000001;
+            }
+        &.hidden * {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+    & .state {
+        position: absolute;
+        top: 50%;
+        left: 5vh;
+        margin-top: -2.5vh;
+        font-size: 5vh;
+        line-height: 5vh;
+        font-weight: 300;
+    }
+
+    & span.temp {
+        position: absolute;
+        top: 50%;
+        right: 5vh;
+        font-size: 2.5vh;
+        line-height: 2.5vh;
+        font-weight: 500;
+    }
+
+    .city {
+        left: 5vh;
+        top: 50%;
+        margin-top: 2.5vh;
+        font-size: 0;
+        line-height: 2.5vh;
+        font-weight: 100;
+    }
+
+
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 700;
+        height: ($loc-card-height / 4);
+
+
+        &:first-child {
+            background-color: rgba($pk-dark-blue, .7);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            // filter: drop-shadow(0 0 1vh #851e1a);
+        }
+        &:nth-child(2) {
+            background-color: rgba($pk-red, .7);
+            // filter: drop-shadow(0 0 1vh #b17418);
+        }
+        &:nth-child(3) {
+            background-color: rgba($pk-orange, .7);
+            // filter: drop-shadow(0 0 1vh #88680a);
+        }
+        &:last-child {
+            background-color: rgba($pk-gold, .7);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}

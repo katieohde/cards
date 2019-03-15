@@ -1,0 +1,133 @@
+.navigation {
+    
+    &__card-header {
+        color: $pk-gray;
+    }
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 60rem;
+        left: 6.5rem;
+    }
+
+    &__nav {
+        position: fixed;
+        top: 14rem;
+        left: 2.5rem;
+        width: 20rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        z-index: 100;
+    }
+
+
+    &__list {
+        position: absolute;
+        list-style: none;
+        width: 100%;
+    }
+
+    &__item {
+        border-bottom: 8px solid transparent;
+        margin: 0 1rem ;
+    }
+
+    &__item:hover,
+    &__item:active {
+        border-bottom: 8px solid rgba($pk-gray, .6);
+    }
+
+    &__link,
+    &__link:link,
+    &__link:active {
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 400;
+        color: $pk-red;
+        text-decoration: none;
+        text-transform: uppercase;
+        // background-size: 220%;
+    }
+        
+
+// fuctionality
+
+&__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+}
+
+// icon
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+        
+        &::before {
+            top: -.8rem;
+        }
+        &::after {
+            top: .8rem;
+        }
+
+        &__button::hover &__icon::before {
+            top: -1rem;
+        }
+
+        &__button::hover &__icon::after {
+            top: 1rem;
+        }
+
+    }
+} 
+
+nav {
+    height: 7rem;
+
+    &.bg-custom {
+        background-image: linear-gradient(to right, $pk-blue, $pk-light-blue);
+        margin-right: 0;
+    }  
+
+    &.navbar-custom {
+        color: $color-white;
+    }
+
+    span.navbar-brand {
+        margin-top: -10px;
+        font-size: 1.6rem;
+        text-shadow: 1px 1px 15px $color-black;
+    }
+
+    a.nav-link {
+        color: $color-white;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $pk-light-blue;
+            border-bottom: 6px solid $pk-orange;
+            text-shadow: 1px 1px 1px $color-black;
+        }
+    }
+}
