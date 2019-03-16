@@ -58,6 +58,10 @@ angular
                 templateUrl: 'templates/where.html',
                 controller: 'whereWeController'
             })
+            .when('/facts', {
+                templateUrl: 'templates/facts.html',
+                controller: 'factsController'
+            })
             .otherwise({
                 redirectTo: '/comment'
             });

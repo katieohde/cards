@@ -65,17 +65,20 @@ div.resume--skill {
     bottom: 4px;
     right: 4px;
     color: white;
-    @include shadows;
+    @include shadow3;
 
     &:hover {
         transform: translateY(-3px);
+        // @include shadows;
     }
 
     &:active,
     &:focus {
         transform: translateY(-1px);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        // @include shadows2;
         outline: none;
+    }
     }
 
 
