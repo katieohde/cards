@@ -37,8 +37,7 @@ section.section-employees {
 }
 
 .feature-employees {
-    width: 27rem;
-    height: 15rem;
+    @include businessCard;
     background-color: $color-white;
     box-shadow: 3px 3px 10px $pk-gray;
     padding: 1rem 0 0 1rem;

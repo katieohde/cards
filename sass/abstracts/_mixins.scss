@@ -13,6 +13,33 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin absCenterV {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-35%);
+}
+
+// Card sizes
+
+@mixin standardCard {
+    width: 25rem;
+    height: 30rem;
+}
+@mixin longCard {
+    width: 22rem;
+    height: 35rem;
+}
+@mixin businessCard {
+    width: 27rem;
+    height: 15rem;
+}
+
+// Shadows
+
+@mixin insetShadow {
+    box-shadow: inset -6px -7px 19px darken(black, 0);
+}
+
 @mixin dropshadows {
     filter: drop-shadow(0 0 1vh $pk-gray);
 }
@@ -22,7 +49,14 @@
 }
 
 @mixin shadow15 {
-    box-shadow:0ch 0 12px 15px 0 rgba($color-black, 0.25);
+    box-shadow: 0ch 0 12px 15px 0 rgba($color-black, 0.25);
+}
+@mixin shadow3 {
+    box-shadow : 3px 3px 3px rgba($color-black, 0.25);
+}
+
+@mixin shadow6 {
+    box-shadow : 6px 6px 6px rgba($color-black, 0.25);
 }
 
 @mixin shadow-white {
@@ -38,14 +72,14 @@
     text-shadow: 
     1px 1px rgba($color-text-shadow, 0.8), 
     2px 2px rgba($color-text-shadow, 0.802), 
-    3px 3px rgba($color-text-shadow, 0.804), 
+    3px 3px rgba($colors-text-shadow, 0.804), 
     4px 4px rgba($color-text-shadow, 0.806), 
     5px 5px rgba($color-text-shadow, 0.808), 
     6px 6px rgba($color-text-shadow, 0.81), 
     7px 7px rgba($color-text-shadow, 0.812), 
     8px 8px rgba($color-text-shadow, 0.814), 
     9px 9px rgba($color-text-shadow, 0.816), 
-    10px 10px rgba($color-text-shadow, 0.818), 
+    10px 10px rgba($color-text-shad ow, 0.818), 
     11px 11px rgba($color-text-shadow, 0.82), 
     12px 12px rgba($color-text-shadow, 0.822), 
     13px 13px rgba($color-text-shadow, 0.824), 
