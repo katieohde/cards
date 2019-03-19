@@ -1,12 +1,22 @@
-
-.grid-container {
+section.section-grid {
     position: relative;
+}
+
+section.section-grid .heading-secondary {
+    font-family: 'Nunito', sans-serif;
+}
+
+.grid-container,
+.grid-container-back {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: grid;
     grid-template-columns: repeat(8, 10rem);
     grid-template-rows: repeat(auto-fit, 10rem);
-    grid-row-gap: 15px;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
+    grid-gap: 5px;
     height: 100vh;
     margin: 15px 0;
     grid-auto-flow: dense;
@@ -19,15 +29,22 @@
     color: $color-black;
     // border: 1px solid $pk-gray;
     background-color: white;
-    font-size: 3rem;
+    font-size: 3rem;    
     text-align: center;
     font-family: 'Nunito', sans-serif;
     @include shadow6;
+    transition: all .5s;
     // border-radius: 15px;
 
     &:hover {
         box-shadow : 6px 6px 6px rgba($color-black, 0.5);
         border: 1px solid $daark3;
+        // transform: scale(1.1);
+        transform: translateX(-40px) translateY(-20%) rotateZ(-45deg);
+        -webkit-transform: translateX(-40px) translateY(-20%) rotateZ(-45deg);
+
+        transition-duration: 1s;
+        -webkit-transition-duration: 1s;
     }
 }
 .grid-item1,
@@ -49,33 +66,84 @@
     grid-row: span 2;
 }
 
+.grid-container {
+    & >.grid-item.front:nth-child(2n) {
+        background: $daark3;
+        color: $color-white;
+    }
+    .grid-item.front:nth-child(5n) {
+        background: $daark2;
+        color: $color-white;
+    }
+    .grid-item.front:nth-child(6n),
+    .grid-item.front:nth-child(11n) {
+        background: $daark1;
+        color: $color-white;
+    }
+    .grid-item.front:nth-child(7n),
+    .grid-item1.front {
+        background: $daark4;
+        color: $color-white;
+    }
+    .grid-item14.front {
+        background: $daark5 !important;
+    }
+    .grid-item.front:nth-child(8n) {
+        background: $daark3;
+        color: $color-white;
+    }
+    .grid-item.front:nth-child(9n) {
+        background: $daark5;
+        color: $color-white;
+    }
+}
 
-.grid-item:nth-child(2n) {
-    background: $daark3;
-    color: $color-white;
+.grid-container-back {
+    .grid-item:nth-child(2n) {
+        background: $deeep1;
+        color: $color-white;
+    }
+    .grid-item:nth-child(5n) {
+        background: $deeep1;
+        color: $color-white;
+    }
+    .grid-item:nth-child(6n),
+    .grid-item:nth-child(11n) {
+        background: $deeep1;
+        color: $color-white;
+    }
+    .grid-item:nth-child(7n),
+    .grid-item1 {
+        background: $deeep1;
+        color: $color-white;
+    }
+    .grid-item14 {
+        background: $deeep1 !important;
+    }
+    .grid-item:nth-child(8n) {
+        background: $deeep1;
+        color: $color-white;
+    }
+    .grid-item:nth-child(9n) {
+        background: $deeep1;
+        color: $color-white;
+    }
 }
-.grid-item:nth-child(5n) {
-    background: $daark2;
-    color: $color-white;
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(6, 10%);
+        grid-template-rows: repeat(auto-fit, 10%);
+        grid-row-gap: 5px;
+        // justify-content: space-around;
+    }
 }
-.grid-item:nth-child(6n),
-.grid-item:nth-child(11n) {
-    background: $daark1;
-    color: $color-white;
-}
-.grid-item:nth-child(7n),
-.grid-item1 {
-    background: $daark4;
-    color: $color-white;
-}
-.grid-item14 {
-    background: $daark5 !important;
-}
-.grid-item:nth-child(8n) {
-    background: $daark3;
-    color: $color-white;
-}
-.grid-item:nth-child(9n) {
-    background: $daark5;
-    color: $color-white;
+
+@media screen and (max-width: 376px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 5rem);
+        grid-template-rows: repeat(auto-fit, 5rem);
+        grid-row-gap: 5px;
+        // justify-content: space-around;
+    }
 }
