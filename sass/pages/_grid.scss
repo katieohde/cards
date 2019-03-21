@@ -38,13 +38,15 @@ section.section-grid .heading-secondary {
 
     &:hover {
         box-shadow : 6px 6px 6px rgba($color-black, 0.5);
-        border: 1px solid $daark3;
-        // transform: scale(1.1);
+        border: 1px solid $web3;
+        // transform: rotateY(45deg) translateX(0px) translateY(0px);
+        // animation: slideBack 1s;
+        transform: scale(1.1);
         transform: translateX(-40px) translateY(-20%) rotateZ(-45deg);
         -webkit-transform: translateX(-40px) translateY(-20%) rotateZ(-45deg);
 
-        transition-duration: 1s;
-        -webkit-transition-duration: 1s;
+        transition-duration: .5s;
+        -webkit-transition-duration: .5s;
     }
 }
 .grid-item1,
@@ -67,65 +69,69 @@ section.section-grid .heading-secondary {
 }
 
 .grid-container {
+    z-index: 2;
     & >.grid-item.front:nth-child(2n) {
-        background: $daark3;
+        background: $web3;
         color: $color-white;
     }
-    .grid-item.front:nth-child(5n) {
-        background: $daark2;
+    .grid-item.front:nth-child(5n),
+    .grid-item29 {
+        background: $web2;
         color: $color-white;
     }
     .grid-item.front:nth-child(6n),
     .grid-item.front:nth-child(11n) {
-        background: $daark1;
+        background: $web1;
         color: $color-white;
     }
     .grid-item.front:nth-child(7n),
     .grid-item1.front {
-        background: $daark4;
+        background: $web4;
         color: $color-white;
     }
     .grid-item14.front {
-        background: $daark5 !important;
+        background: $web5 !important;
     }
     .grid-item.front:nth-child(8n) {
-        background: $daark3;
+        background: $web3;
         color: $color-white;
     }
     .grid-item.front:nth-child(9n) {
-        background: $daark5;
+        background: $web5;
         color: $color-white;
     }
 }
 
 .grid-container-back {
+    z-index: 1;
     .grid-item:nth-child(2n) {
-        background: $deeep1;
+        background: $kip1;
         color: $color-white;
     }
     .grid-item:nth-child(5n) {
-        background: $deeep1;
+        background: $kip2;
         color: $color-white;
     }
     .grid-item:nth-child(6n),
     .grid-item:nth-child(11n) {
-        background: $deeep1;
+        background: $kip3;
         color: $color-white;
     }
     .grid-item:nth-child(7n),
-    .grid-item1 {
-        background: $deeep1;
+    .grid-item1,
+    .grid-item19 {
+        background: $kip5;
         color: $color-white;
     }
     .grid-item14 {
-        background: $deeep1 !important;
+        background: $kip5 !important;
     }
     .grid-item:nth-child(8n) {
-        background: $deeep1;
+        background: $kip3;
         color: $color-white;
     }
     .grid-item:nth-child(9n) {
-        background: $deeep1;
+        background: $kip5;
         color: $color-white;
     }
 }
@@ -145,5 +151,27 @@ section.section-grid .heading-secondary {
         grid-template-rows: repeat(auto-fit, 5rem);
         grid-row-gap: 5px;
         // justify-content: space-around;
+    }
+}
+@keyframes slideBack {
+    0% {
+        opacity: 1;
+        transform: translateY(-100px);
+        // z-index: -1;
+    }
+    25% {
+        opacity: .8;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: .5;
+        transform: translateY(-20px);
+    }
+    75% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
     }
 }

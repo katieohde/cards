@@ -51,6 +51,8 @@ section.section-employees {
     & .card--title {
         font-size: 12px;
         margin: -6px 0 0 0;
+        border-bottom: 1px solid $pk-gold;
+        margin-right: 10px;
     }
 
     & .card--contact {

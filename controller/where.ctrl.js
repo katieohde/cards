@@ -1,6 +1,8 @@
 angular.module('app.core').controller('whereWeController', function() {
     var vm = this;
 
+    vm.footerDetails = "Build using SASS, HTML, AngularJS"
+
     $('.panel').click(function() {
       if(!$(this).hasClass('active')) {
         var index = $(this).index();

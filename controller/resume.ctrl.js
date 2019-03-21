@@ -1,13 +1,20 @@
 angular.module('app.core').controller('resumeController', ['$scope', function($scope) {
     var vm = this;
-    $scope.footerDetail = 'Built with: AngularJS, SASS';
+    $scope.footerDetails = 'Built with: AngularJS, SASS';
     $scope.resume = {
         id: 'kohde',
         name: 'Kathleen Ohde',
         title: 'Software Engineer I',
         intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat unde optio sapiente aut voluptatibus, voluptates eum fugiat labore eos vero commodi expedita. Facilis ad minus tempore dolor sapiente, ipsum nostrum.<br/>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat unde optio sapiente aut voluptatibus, voluptates eum fugiat labore eos vero commodi expedita. Facilis ad minus tempore dolor sapiente, ipsum nostrum.',
-        skills: ['JavaScript','HTML5','CSS','AngularJS','Bootstrap 4','SASS','SQL','CMS','Application Management','TeamSite CMS','OpenDeploy','Git','Responsive Web Design'],
-        exps: ['First National Bank of Omaha','ProKarma'],
+        skills: ['JavaScript','HTML5','CSS','AngularJS','VueJS','Bootstrap 4','SASS','SQL','CMS','Application Management','TeamSite CMS','OpenDeploy','Git','CSS Grid'],
+        exps: [
+            {'name':'First National Bank of Omaha',
+            'dates':'December 6, 1986 - April 12, 2017',
+            'desc': 'Quaerat unde optio sapiente aut voluptatibus, voluptates eum fugiat labore eos vero commodi expedita.'},
+            {'name':'ProKarma',
+            'dates':'April 22, 2017 - Present',
+            'desc':'Quaerat unde optio sapiente aut voluptatibus, voluptates eum fugiat labore eos vero commodi expedita.'}
+        ],
         employer: 'ProKarma',
         startDate: '05/25.27',
         cellPhone: '402.880.7600',
@@ -17,7 +24,9 @@ angular.module('app.core').controller('resumeController', ['$scope', function($s
         state: 'NE',
         zip: '68007',
         workEmail: 'kohde@prokarma.com',
-        personalEmail: 'kat.ohde@gmail.com'
+        personalEmail: 'kat.ohde@gmail.com',
+        workSite: 'www.prokarma.com',
+        viewResume: false
     }
 
 }]);
