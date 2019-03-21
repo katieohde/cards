@@ -1,8 +1,9 @@
 section.section-facts {
     .card-container {
         display: flex;
+        justify-content: space-evenly;
         height: 100%;
-        @include absCenterV;
+        // @include absCenterV;
         margin-top: 5px;
     }
 
@@ -51,6 +52,7 @@ section.section-facts {
         left: 1rem;
         display: none;
         overflow: hidden;
+        text-overflow: ellipsis;
 
         color: white;
         font-size: 1.6rem;
@@ -94,6 +96,8 @@ section.section-facts {
             // display: none;
             left: .25rem;
             transform: scale(.85);
+            font-size: 2rem;
+            padding-top: 10px;
             // color: darken($color-white, 20);
             // text-shadow: 1px 1px 1px black;
         }
@@ -131,6 +135,79 @@ section.section-facts {
             opacity: 0;
             transform: scale(1);
             display: none;
+        }
+    }
+    
+    section.section-facts-dark {
+        .card-container {
+            display: flex;
+            justify-content: space-evenly;
+            height: 100%;
+            // @include absCenterV;
+            margin-top: 5px;
+        }
+    
+        & .fact {
+            @include longCard;
+            transition: all 0.4s ease;
+            margin: 5px 5px;
+            font-family:'Roboto', Arial, sans-serif;
+            // color: $color-white;
+        }
+    
+        & .fact--category {
+            position: absolute;
+            font-size: 1.2rem;
+            left: 1rem;
+            top: 1rem;
+        }
+    
+        & .fact--head{
+            position: absolute;
+            text-align: left;
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 1.1;
+            left: 1rem;
+            top: 2.5rem;
+            transition: all .5s ease;
+        }
+    
+        & span.fact--source{
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    
+        .fact--answer {
+            will-change: auto;
+            position: absolute;
+            left: .5rem;
+            top: 20%;
+            margin-top: 3rem;
+            font-size: 2rem;
+            line-height: 2rem;
+            left: 1rem;
+            display: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    
+        .fact:nth-child(even) {
+            background-color: $color-black;
+            color: $color-white;
+            border: 1px solid $color-black;
+        }
+        .fact:nth-child(odd) {
+            background-color: s$color-white;
+            color: $color-black;
+            border: 1px solid $color-black;
+
         }
     }
     

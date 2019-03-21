@@ -62,6 +62,10 @@ angular
                 templateUrl: 'templates/facts.html',
                 controller: 'factsController'
             })
+            .when('/grid', {
+                templateUrl: 'templates/grid.html',
+                controller: 'gridController'
+            })
             .otherwise({
                 redirectTo: '/comment'
             });
