@@ -1,6 +1,8 @@
 angular.module('app.core').controller('commentController', function() {
     var vm = this;
 
+    vm.footerDetails = "Build using SASS, HTML, AngularJS"
+
     $.fn.commentCards = function(){
 
         return this.each(function(){
