@@ -1,5 +1,5 @@
-angular.module('app.core').controller('aboutUsController', function() {
+angular.module('app.core').controller('aboutUsController', ['$scope', '$http', function($scope, $http) {
     var vm = this;
 
-    vm.footerDetails = "Build using SASS, HTML, AngularJS"
-});
+    $scope.footerDetails = "SASS, HTML, AngularJS and CSS Grid"
+}]);

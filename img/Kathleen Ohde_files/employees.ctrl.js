@@ -11,11 +11,9 @@ angular.module('app.core').controller('employeesController', ['$scope', '$http',
         id: 'kohde',
         name: 'Kathleen Ohde',
         title: 'Software Engineer I',
-        intro: 'I enjoy collaborating with peers to create applications. I think everyone has a different viewpoint and want to work on a team where everyone can be treated with respect and feel that their opinions are heard. I feel the best ideas come when people get together and collaborate on a solution together with open minds.',
+        intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat unde optio sapiente aut voluptatibus, voluptates eum fugiat labore eos vero commodi expedita. Facilis ad minus tempore dolor sapiente, ipsum nostrum.<br/>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat unde optio sapiente aut voluptatibus, voluptates eum fugiat labore eos vero commodi expedita. Facilis ad minus tempore dolor sapiente, ipsum nostrum.',
         skills: ['JavaScript','HTML5','CSS','AngularJS','Bootstrap 4','SASS','SQL','CMS','Application Management','TeamSite CMS','OpenDeploy','Git','Responsive Web Design'],
-        exps: ['First National Bank of Omaha ','ProKarma'],
-        experience: [{'company':'First National Bank of Omaha', 'date':'December 1986 - April 2017', 'title':'UI Developer/Programmer Analyst II'},
-                    {'company':'ProKarma', 'date':'April 2017 - Present', 'title':'Software Engineer I'}],
+        exps: ['First National Bank of Omaha','ProKarma'],
         employer: 'ProKarma',
         startDate: '05/25.27',
         cellPhone: '402.880.7600',
@@ -26,8 +24,7 @@ angular.module('app.core').controller('employeesController', ['$scope', '$http',
         zip: '68007',
         workEmail: 'kohde@prokarma.com',
         personalEmail: 'kat.ohde@gmail.com',
-        footerDetails: 'HTML, CSS, JSON, SASS, AngularJS'
-
+        footerDetails: 'Built using code stuff'
     }
 
 }]);

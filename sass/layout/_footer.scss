@@ -5,10 +5,22 @@ footer {
 div.wavetoo {
     position: fixed;
     width: 100vw;
-    min-height: 3vh;
+    height: 5rem;
+    margin-bottom: 2rem;
     bottom: 0;
     left: 0;
-    background-color: $pk-light-blue;
+    @include shadow3;
+    // background-color: $daark1;
+    background-image: linear-gradient(to right, $brite5, $brite3);
+    // background-image: linear-gradient(to right, $kip4, $kip5);
+
+    &>p.footer--text {
+      color: $color-white;
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 3rem;
+      padding: 0 0 5px 20px;
+      text-align: left;
+    }
 }
 
 // trying to make a wave in footer
@@ -30,10 +42,10 @@ div.wavetoo {
       width: 100%;
     }
     
-    .wave {
-      animation: wave 7s linear;
-      animation-iteration-count:infinite;
-      fill: #4478e3;
+    .wavetoo {
+      // animation: wave 7s linear;
+      // animation-iteration-count:infinite;
+      // fill: #4478e3;
     }
 
     .gooeff {

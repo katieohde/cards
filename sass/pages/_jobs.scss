@@ -252,32 +252,45 @@ section.section-jobs {
 section.section-jobs-alt {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    height: 80vh;
-    margin-top: 140px;
+    height: 100vh;
+    
+    & .grid-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-content: space-evenly;
+    }
 }
 
 .pk-card-slide {
-    position: relative;
+    position: absolute;
     &:hover {
         cursor: pointer;
-
     }
-
+    &:nth-child(1) {
+        top: 0;
+        left: 30%;
+    }
+    &:nth-child(2) {
+        // top: 0;
+        left: 55%;
+    }
+    
     & .slide__front,
     & .slide__back {
         display: block;
-        top: 0;
-        left: 0;
         width: 25rem;
         height: 35rem;
+        top: 0;
         position: absolute;
         overflow: hidden;
         text-align: center;
+        border: 1px solid $color-black;
         // @include shadows2;
     }
 
         .slide__front {
-        z-index: 2;
+        z-index: 20001;
         transition: all .5s ease;
         background-color: $color-white;
 
@@ -322,7 +335,7 @@ section.section-jobs-alt {
     & .slide__back {
         @include shadows2;
         background-color: $pk-gold;
-        z-index: 1;
+        z-index: 19999;
 
         & h3 {
             font-family: 'Montserrat', sans-serif;
@@ -367,7 +380,8 @@ section.section-jobs-alt {
             font-weight: 700;
             bottom: 10px;
             right: 15px;
-            padding: 0;
+            padding: 10px;
+            background-image: linear-gradient(to right, $earth2, $soft2);
             transition: all 0.5s ease-in;
         }
 

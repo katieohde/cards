@@ -102,7 +102,186 @@
 } 
 
 nav {
-    height: 7rem;
+    &.nav__banner {
+        position: fixed;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        height: 10rem;
+        width: 100%;
+        margin-top: 5rem;
+        background-color: $brite4;
+        color: $color-black;
+        @include shadow6;
+        text-shadow: 2px 2px 3px rgba($coolor4, 0.8);
+        z-index: 20000;
+
+        div.dropper {
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            cursor: pointer;
+            z-index: -1;
+
+            &>i {
+                color: black;
+                // background-clip: text;
+                // -webkit-background-clip: text;
+                // -webkit-background-clip: text;
+                // background-image: linear-gradient(to right, $daark1, $daark2);
+                text-shadow: 2px 2px 3px rgba($coolor4, 0.8);
+
+                &:hover {
+                    animation: bouncer 2s ease;
+                }
+            }
+            & ul li.dropper--color {
+                text-decoration: none;
+                display: inline-grid;
+                margin: -5px 0 0 14px;
+                cursor: pointer;
+
+                &.color1 {
+                    color: $daark1;
+                }
+                &.color2 {
+                    color: $daark2;
+                }
+                &.color3 {
+                    color: $daark3;
+                }
+                &.color4 {
+                    color: $daark4;
+                }
+                &.color5 {
+                    color: $daark5;
+                }
+            }
+        }
+
+        input.nav__button {
+            display: none;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: calc((100% - 4rem) / 2);
+            right: 2.5rem;
+            // background-color: transparent;
+            // padding: 0;
+            // margin: 0;
+            user-select: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 10000;
+            transition: all 4ms ease;
+
+            &:checked {
+                & span:nth-child(1) {
+                    top: 20px;
+                    transform: rotate(45deg);
+                }
+                & span:nth-child(2) {
+                    display: none;
+                }
+                & span:nth-child(3) {
+                    top: 20px;
+                    transform: rotate(-45deg);
+                }
+            }
+            
+            
+        }
+        label span {
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 6px;
+            top: 38px;
+            right: 2.5rem;
+            
+            background: #000;
+            border-radius: 10px;
+            box-shadow: 2px 2px 3px rgba($coolor4, 0.8);
+
+                &:nth-child(2) {
+                    top: 50px;
+                    box-shadow: 2px 2px 3px rgba($coolor4, 0.8);
+
+                }
+                &:nth-child(3) {
+                    top: 62px;
+                    box-shadow: 2px 2px 3px rgba($coolor4, 0.8);
+                }
+        }
+        ul.nav__items {
+            display: table;
+            height: 5rem;
+            width: 50%;
+            
+            & li {
+                display: inline-block;
+                position: absolute;
+                bottom: 15px;
+                font-size: 1.4rem;
+                list-style-type: none;
+                text-decoration: none;
+                
+            }
+        }
+        .nav__banner--name {
+            // font-family: 'Montserrat', sans-serif;
+            // font-family: 'Gothic A1', sans-serif;
+            font-weight: 700;
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 4rem;
+            text-align: center;
+            padding: .3rem 0 .35rem;
+            color: $somber2;
+            text-shadow: 2px 2px 3px darken(rgba($daark4, 0.8),10);
+        }
+        .nav__banner--title {
+            font-family: 'Varela Round', sans-serif;
+            text-align: center;   
+            margin-top: -3px;
+        }
+        .nav__banner--company {
+            font-family: 'Varela Round', sans-serif;
+            text-align: center;
+            margin-top: -3px;
+        }
+    }
+
+
+    div.menu__circle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        padding: 20px 21px;
+        border-radius: 50px;
+        background-color: $brite3;
+        z-index: 1000;
+    }
+
+    div.menu__big-circle {
+        position: fixed;
+        width: 0;
+        height: 0;
+        transform-origin: 100% 0%;
+        background-color: $brite3;
+        z-index: 10000;
+        font-size: 1.6rem;
+        top: 0px;
+        right: 0px;
+        
+        &.show__big-circle {
+            width: 500px;
+            height: 500px;
+            border-bottom-left-radius: 500px;
+        }
+
+    }
+
 
     &.bg-custom {
         background-image: linear-gradient(to right, $pk-blue, $pk-light-blue);
@@ -129,5 +308,35 @@ nav {
             border-bottom: 6px solid $pk-orange;
             text-shadow: 1px 1px 1px $color-black;
         }
+    }
+}
+
+@keyframes bouncer {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+
+    30% {
+        transform: scale(.9, 1.1) translateY(-40px);
+    }
+
+    50% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    57% {
+        transform: scale(1, 1) translateY(-7px);
+    }
+
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1, 1) translateY(0);
     }
 }

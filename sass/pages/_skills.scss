@@ -1,5 +1,5 @@
 section.section-skills {
-    // margin: auto;
+    margin-top: 4rem;
 }
 
 section .feature-skills {
@@ -8,18 +8,19 @@ section .feature-skills {
     height: 220px;
     padding: 10px;
     margin-bottom: 10px;
-    border: .5px solid $color-grey-light-3;
+    background-color: $coolor3;
+    border: .5px solid $kip5;
     border-radius: 3px;
     @include shadows;
 
     div.skills-header {
-        border-bottom: 1px solid $pk-gold;
+        border-bottom: 1px solid $kip5;
     }
 
     .skills--title {
         font-size: 20px;
         font-weight: 500;
-        color: $pk-cherry-red;
+        color: $kip3;
         display: inline;
         margin-left: 8px;
     }
@@ -28,6 +29,7 @@ section .feature-skills {
         font-size: 10px;
         letter-spacing: .2px;
         height: 155px;
+        color: $kip2;
         overflow: hidden;
         margin-top: 5px;
     }
@@ -37,7 +39,7 @@ section .feature-skills {
         justify-content: space-between;
         align-items: flex-end;
         height: 3rem;
-        border-top: .5px solid $pk-gold;
+        border-top: .5px solid $kip2;
 
         p.skills-year {
             position: absolute;
@@ -48,14 +50,14 @@ section .feature-skills {
     }
 
     & .skills--footer>p {
-        color: $pk-blue;
+        color: $kip4;
         align-content: flex-end;
         bottom: 10px;
         
-        & i {
+        &>i {
             font-weight: 600;
-            font-size: 12px;
-            color: $pk-blue;
+            font-size: 1px;
+            color: $kip4;
         }
 
     }

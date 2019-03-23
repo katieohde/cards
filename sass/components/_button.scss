@@ -71,11 +71,11 @@
 
     &--rect:link,
     &--rect:visited {
-        background-color: $pk-dark-blue;
+        background-image: linear-gradient(to right, darken($pk-red, 20), darken($pk-red,10));
         font-size: 1rem;
         padding: 6px;
         color: $color-white;
-        border-radius: 3px;
+        border-radius: 10px;
         bottom: 10px;
         right: 10px;
         position: absolute;
