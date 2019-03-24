@@ -35,20 +35,20 @@ section .section-comment {
     margin-bottom: 0; 
   }
   &:first-child {
-    background-color: $pk-dark-blue;
-    color: lighten($pk-dark-blue, 25);
+    background-color: $cool1;
+    color: lighten($cool1, 25);
   }
   &:nth-child(2) {
-    background-color: $pk-light-blue;
-    color: lighten($pk-light-blue, 25);
+    background-color: $cool3;
+    color: lighten($cool3, 25);
   }
   &:nth-child(3) {
-    background-color: $pk-orange;
-    color: lighten($pk-orange, 25);
+    background-color: $cool2;
+    color: darken($cool2, 25);
   }
   &:last-child {
-    background-color: $pk-red;
-    color: lighten($pk-red, 25);
+    background-color: $cool5;
+    color: lighten($cool5, 25);
   }
   & h1 {
     margin-bottom: 25px;
@@ -56,6 +56,7 @@ section .section-comment {
   }
   & .commented {
     font-weight: 500;
+    user-select: none;
   }
   & .author {
     position: absolute;
@@ -100,4 +101,22 @@ section .section-comment {
   opacity: 1;
   background: #EEE;
   transform: rotate(-1deg) translateX(0%) scale(1);
+}
+
+ul.cards
+
+.card.transition{
+  li.card{
+    transform: rotateZ(0deg);
+    &.card-1{
+      left: 440px;
+    }
+
+    &.card-2{
+      left: 220px;
+    }
+
+    &.card-3{
+    }
+  }
 }

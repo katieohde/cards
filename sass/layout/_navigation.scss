@@ -120,7 +120,7 @@ nav {
             top: 30px;
             left: 20px;
             cursor: pointer;
-            z-index: -1;
+            z-index: 40000;
 
             &>i {
                 color: black;
@@ -139,6 +139,7 @@ nav {
                 display: inline-grid;
                 margin: -5px 0 0 14px;
                 cursor: pointer;
+                z-index: 40001;
 
                 &.color1 {
                     color: $daark1;
@@ -190,7 +191,11 @@ nav {
             
             
         }
-        label span {
+        label {
+            cursor: pointer;
+            z-index: 41000;
+
+            span {
             display: block;
             position: absolute;
             width: 40px;
@@ -212,6 +217,7 @@ nav {
                     box-shadow: 2px 2px 3px rgba($coolor4, 0.8);
                 }
         }
+    }
         ul.nav__items {
             display: table;
             height: 5rem;
@@ -321,7 +327,7 @@ nav {
     }
 
     30% {
-        transform: scale(.9, 1.1) translateY(-40px);
+        transform: scale(.9, 1.1) translateY(-30px);
     }
 
     50% {
