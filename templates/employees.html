@@ -13,15 +13,19 @@
                             <p class="card--phone"><i class="card--phone__icon fas fa-phone"></i></i> {{ resume.workPhone }}</p>
                             <p class="card--phone"><i class="card--phone__icon fas fa-mobile-alt"></i></i> {{ resume.cellPhone }}</p>
                             <p class="card--email"><i class="card--email far fa-envelope"></i> {{ resume.workEmail }}</p>
-                            <p class="card--email"><i class="card--web fas fa-globe"></i> {{ resume.workSite }}</p>                   
+                            <!-- <p class="card--email"><i class="card--email fas fa-globe"></i> {{ resume.workSite }}</p>                    -->
                         </div>
                         <div>
-                            <button ng-click="viewResum = !viewResume" class="btn btnResume" href="#/resume" ng-model="viewResume">View Resume</button>
+                            <button class="btn btnResume" href="#/resume" ng-model="viewResume">More Info</button>
                             <ul class="dots"><li></li><li></li><li></li></ul>
                         </div>
                     </div>
+                    <div class="linked-in">
+                        <i class="fab fa-linkedin fa-5x"></i>
+                        <span class="linkedin-link"><a href="https://www.linkedin.com/in/kathleenohde/">View my LinkedIn profile</a></span>
+                    </div>
                 </div>
-                <div ng-show="!viewResume" class="resume col-sm-6">
+                <div class="resume col-sm-6">
                     <div class="">
                         <!-- <img src="img/prokarma_icon_black.svg" alt="" width="30px" height="30px" class="bcard--logo"> -->
                         <p class="resume__header--name">{{ resume.name }}</p>

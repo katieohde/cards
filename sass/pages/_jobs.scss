@@ -35,15 +35,15 @@ section.section-jobs {
             text-align: center;
 
             &-1 {
-                background-color: $pk-cherry-red;
+                background-color: $kyle2;
             }
 
             &-2 {
-                background-color: $pk-gold;
+                background-color: $kyle4;
             }
 
             &-3 {
-                background-color: $pk-blue;
+                background-color: $kyle3;
         }
     }
 }
@@ -66,7 +66,7 @@ section.section-jobs {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
         &--1 {
-            // background-image: linear-gradient(to right, $pk-orange-red, $pk-cherry-red), url(../img/fist-pump.jpg);
+            // background-image: linear-gradient(to right, $pk-orange-red, $kyle2), url(../img/fist-pump.jpg);
             background-image: url(../img/code.jpg);
         }
 
@@ -123,7 +123,7 @@ section.section-jobs {
         line-height: 1.9;
 
         .fas {
-            color: $pk-dark-blue;
+            color: $kyle2;
         }
     }
 }   
@@ -147,8 +147,9 @@ section.section-jobs {
         
     
         & .detail--border {
-            border-top: 10px solid $pk-cherry-red;
+            border-top: 10px solid $brite4;
             transform: skewY(-5.5deg);
+            margin-top: -8px;
         }
 
         ul {
@@ -188,15 +189,15 @@ section.section-jobs {
             text-align: center;
 
             &-1 {
-                background-color: $pk-cherry-red;
+                background-color: $kyle2;
             }
 
             &-2 {
-                background-color: $pk-gold;
+                background-color: $kyle4;
             }
 
             &-3 {
-                background-color: $pk-blue;
+                background-color: $kyle3;
         }
     }
 }
@@ -218,7 +219,7 @@ section.section-jobs {
         clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%);
 
         &--1 {
-            // background-image: linear-gradient(to right, $pk-orange-red, $pk-cherry-red), url(../img/fist-pump.jpg);
+            // background-image: linear-gradient(to right, $pk-orange-red, $kyle2), url(../img/fist-pump.jpg);
             background-image: url(../img/code.jpg);
         }
 
@@ -308,7 +309,7 @@ section.section-jobs-alt {
             position: absolute;
             bottom: -40px;
             @include absCenter;
-            color: darken($pk-gold, 0);
+            color: $earth3;
             font-size: 2.8rem;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
@@ -334,7 +335,7 @@ section.section-jobs-alt {
 
     & .slide__back {
         @include shadows2;
-        background-color: $pk-gold;
+        background-color: $kyle4;
         z-index: 19999;
 
         & h3 {
@@ -355,7 +356,7 @@ section.section-jobs-alt {
         li {
             padding: 1rem 2rem;
             text-align: center;
-            border-top: 1px solid darken($pk-gold, 5);
+            border-top: 1px solid darken($kyle4, 5);
             margin: 0 20px;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.4rem;
@@ -363,7 +364,7 @@ section.section-jobs-alt {
             color: $color-white;
 
             &:hover {
-                text-decoration: underline lighten($pk-gold, 25);
+                text-decoration: underline lighten($kyle4, 25);
             }
 
         }
@@ -381,7 +382,7 @@ section.section-jobs-alt {
             bottom: 10px;
             right: 15px;
             padding: 10px;
-            background-image: linear-gradient(to right, $earth2, $soft2);
+            background-image: linear-gradient(to right, $earth5, $earth10);
             transition: all 0.5s ease-in;
         }
 

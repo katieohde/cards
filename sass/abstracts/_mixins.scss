@@ -6,6 +6,44 @@
     }
 }
 
+// Fonts
+
+@mixin f-roboto {
+    font-family: 'Roboto', sans-serif;
+} 
+
+@mixin f-opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+@mixin f-nunito {
+    font-family: 'Nunito', sans-serif;
+}
+@mixin f-varela {
+    font-family: 'Varela Round', sans-serif;
+}
+@mixin f-shadows {
+    font-family: 'Shadows Into Light', cursive;
+}
+@mixin f-acme {
+    font-family: 'Acme', sans-serif;
+}
+@mixin f-lato {
+    font-family: 'Lato', sans-serif;
+}
+@mixin f-apple {
+    font-family: 'Homemade Apple', cursive;
+}
+@mixin f-mont {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin f-sigmar {
+    font-family: 'Sigmar One', cursive;
+}
+
+
+
+
+
 @mixin absCenter {
     position: absolute;
     top: 50%;
@@ -37,6 +75,11 @@
 @mixin businessCard {
     width: 27rem;
     height: 15rem;
+}
+
+@mixin businessLinkedIn {
+    width: 27rem;
+    height: 4rem;
 }
 
 // Shadows

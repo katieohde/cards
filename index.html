@@ -17,7 +17,7 @@
         
         <title>Kathleen Ohde</title>
     </head>
-    <body ng-app="app">
+    <body id="bod" ng-app="app" ng-controller="indexController">
 
         <div class="banner">
             <div class="icon-js"><img src="/img/js.png" alt="JavaScript Logo" class="img-js"></div>
@@ -43,51 +43,48 @@
                     <h3 class="nav__banner--company">Omaha, NE</h3>
                 </div>
                 <div>
-                    <span class=""></span>
-                    <input type="checkbox" name="nav__button" class="nav__button"/>
-                    <label for="nav__button">
+                    <div class="hamburger-menu">
                         <span class=""></span>
                         <span class=""></span>
                         <span class=""></span>
-                    </label>
+                    </div>
                 </div>
                 <div class="menu--circle">
                     <div class="menu__big-circle">
                         <div class="menu__items">
                             <ul class="nav__items">
-                                <li class="nav__item">
-                                    <a class="nav-link" href="#/aboutUs">About Us</a>
+                                <li class="nav__item link1">
+                                    <a class="nav-link" href="#/aboutUs">ProKarma</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item link2">
                                     <a class="nav-link" href="#/comments">Comments</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#/employees">Employees</a>
+                                <li class="nav-item link3">
+                                    <a class="nav-link" href="#/employees">My Resume</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item link4">
                                     <a class="nav-link" href="#/facts">Flash Cards</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Jobs
+                                <li class="nav-item dropdown link5">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Examples
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="#/jobs">Flip Card</a>
                                         <a class="dropdown-item" href="#/slide">Slide Card</a>
                                     </div>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item link6">
                                     <a class="nav-link" href="#/news">News</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item link7">
                                     <a class="nav-link" href="#/skills">Skills</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#/whereWe">Where We Are</a>
+                                <li class="nav-item link8">
+                                    <a class="nav-link" href="#/whereWe">About Me</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item link9">
                                     <a class="nav-link" href="#/grid">Grid</a>
-                                </li>
+                                </li> -->
                             </ul> 
                         </div>
                     </div>
@@ -106,7 +103,7 @@
         <footer>
             <div class="wavetoo">
                 <p class="footer--text">
-                    Built using: {{ resume.footerDetails }}
+                    Built using: {{ footerDetails }}
                 </p>
             </div>
         </footer>
@@ -131,6 +128,7 @@
         <script src="controller/footer.ctrl.js"></script>
         <script src="controller/graphs.ctrl.js"></script>
         <script src="controller/grid.ctrl.js"></script>
+        <script src="controller/index.ctrl.js"></script>
         <script src="controller/jobs.ctrl.js"></script>
         <script src="controller/skills.ctrl.js"></script>
         <script src="controller/slide.ctrl.js"></script>

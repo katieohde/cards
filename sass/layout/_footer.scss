@@ -17,8 +17,8 @@ div.wavetoo {
     &>p.footer--text {
       color: $color-white;
       font-family: 'Shadows Into Light', cursive;
-      font-size: 3rem;
-      padding: 0 0 5px 20px;
+      font-size: 2rem;
+      padding: 8px 0 0 20px;
       text-align: left;
     }
 }
@@ -40,12 +40,6 @@ div.wavetoo {
     }
     svg {
       width: 100%;
-    }
-    
-    .wavetoo {
-      // animation: wave 7s linear;
-      // animation-iteration-count:infinite;
-      // fill: #4478e3;
     }
 
     .gooeff {
