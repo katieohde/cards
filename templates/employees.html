@@ -13,11 +13,9 @@
                             <p class="card--phone"><i class="card--phone__icon fas fa-phone"></i></i> {{ resume.workPhone }}</p>
                             <p class="card--phone"><i class="card--phone__icon fas fa-mobile-alt"></i></i> {{ resume.cellPhone }}</p>
                             <p class="card--email"><i class="card--email far fa-envelope"></i> {{ resume.workEmail }}</p>
-                            <!-- <p class="card--email"><i class="card--email fas fa-globe"></i> {{ resume.workSite }}</p>                    -->
                         </div>
                         <div>
-                            <button class="btn btnResume" href="#/resume" ng-model="viewResume">More Info</button>
-                            <ul class="dots"><li></li><li></li><li></li></ul>
+                            <button id="Resume" class="btn btnResume" href="#">More Info</button>
                         </div>
                     </div>
                     <div class="linked-in">
@@ -27,7 +25,6 @@
                 </div>
                 <div class="resume col-sm-6">
                     <div class="">
-                        <!-- <img src="img/prokarma_icon_black.svg" alt="" width="30px" height="30px" class="bcard--logo"> -->
                         <p class="resume__header--name">{{ resume.name }}</p>
                         
                     </div>
@@ -56,7 +53,6 @@
                         </div>
                     </div>
                         
-
                     <div class="resume--exp">
                         <h6>Experience:</h6>
                         <div class="resume--exp"></div>
@@ -70,6 +66,3 @@
         </div>
     </div>
 </section>
-<!-- <section class="resume" ng-controller="employeeController as employee">
-        <div ng-include="/templates/resume.html"></div>
-</section> -->

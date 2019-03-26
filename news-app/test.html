@@ -1,0 +1,6 @@
+unirest.post("https://HackerNewsdimashirokovV1.p.rapidapi.com/getAskStories")
+.header("X-RapidAPI-Key", "d5f132d0abmshd0942b2863e0e04p110507jsnce35aa5516be")
+.header("Content-Type", "application/x-www-form-urlencoded")
+.end(function (result) {
+  console.log(result.status, result.headers, result.body);
+});

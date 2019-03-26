@@ -1,60 +1,86 @@
 section.section-where {
-    .card-container {
-        display: flex;
+    .location-card {
+        @include f-varela;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+        justify-content: space-around;
         margin-top: 15rem;
-    }
-
-    & .loc {
-        @include standardCard;
-        transition: all 0.4s ease;
-        z-index: 1;
-
-
-    & .state {
-        position: absolute;
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 300;
-    }
-
-    & span.temp {
-        position: absolute;
-        top: 50%;
-        right: 5vh;
-        font-size: 2.5rem;
-        font-weight: 500;
-    }
-
-    .city {
-        left: 5vh;
-        top: 50%;
-        margin-top: 2.5rem;
-        font-size: 0;
-        line-height: 2.5rem;
-        font-weight: 100;
-    }
-
-
         color: white;
         font-size: 1.6rem;
         font-weight: 700;
-        height: ($loc-card-height / 4);
+    }
+
+    & .loc {
+        position: relative;
+        @include rectCard;
+        transition: all 0.4s ease;
+        z-index: 1;
+        border-radius: 25px;
+        margin: 0 auto;
+        @include shadow6;
+        overflow: hidden;
+        border-bottom: 2px solid lighten($color-off-black,10);
+        border-left: 2px solid lighten($color-off-black,10);
 
 
-        &:first-child {
-            background-color: rgba($pk-dark-blue, .7);
-            // filter: drop-shadow(0 0 1vh #851e1a);
+    & .meHead {
+        position: absolute;
+        text-align: center;
+        margin: 15px 0 0 15px;
+        font-size: 3rem;
+        font-weight: 400;
+        text-shadow: 4px 4px 6px black;
+        z-index: 1000;
+
+    }
+
+    & span.meMinor {
+        position: absolute;
+        top: 55%;
+        left: 1.5vh;
+        padding-right: 5px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    
+    & span.meLine {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 10px;
+        width: 80vw;
+        background-color: $color-white;
+        @include shadow6;
+    }
+
+    & .meVideo {
+        position: absolute;
+        display: block;
+        height: 50%;
+        left: -8px;
+        top: 0;
+        z-index: -1;
+    }
+
+    img.mePicture {
+        position: absolute;
+        top: -19px;
+        width: 305px;
+    }
+
+       &:first-child {
+            background-color: rgba($kip1, .7);
         }
         &:nth-child(2) {
-            background-color: rgba($pk-red, .7);
-            // filter: drop-shadow(0 0 1vh #b17418);
+            background-color: rgba($kip2, .7);
         }
         &:nth-child(3) {
-            background-color: rgba($pk-orange, .7);
-            // filter: drop-shadow(0 0 1vh #88680a);
+            background-color: rgba($kip5, .7);
         }
         &:last-child {
-            background-color: rgba($pk-gold, .7);
+            background-color: rgba($kip4, .7);
         }
     }
 }

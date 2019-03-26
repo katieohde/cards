@@ -600,6 +600,8 @@ nav.nav__banner {
         color: #679436; }
       nav.nav__banner div.dropper ul li.dropper--color.color5 {
         color: #2e4057; }
+      nav.nav__banner div.dropper ul li.dropper--color.color6 {
+        color: #fff; }
   nav.nav__banner div.hamburger-menu {
     display: block;
     position: absolute;
@@ -631,7 +633,6 @@ nav.nav__banner {
     width: 40px;
     height: 6px;
     top: calc((100% - 3rem) / 2);
-    right: 2.5rem;
     background: #000;
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(74, 80, 67, 0.8); }
@@ -1089,6 +1090,8 @@ body {
     background-image: linear-gradient(to bottom right, #142008, #679436); }
   body.color5 {
     background-image: linear-gradient(to bottom right, #0f1c2e, #2e4057); }
+  body.color6 {
+    background-image: linear-gradient(to bottom right, #fff, #bfc1c3); }
 
 section.section-facts {
   width: 100vw;
@@ -1443,9 +1446,8 @@ section.section-grid .heading-secondary {
 .banner .icon-tv {
   position: absolute;
   padding-top: 22rem;
-  left: 44%;
-  margin-left: -200px;
-  z-index: 10001;
+  margin-left: 65%;
+  z-index: -1;
   opacity: .3; }
   .banner .icon-tv .img-tv {
     animation: float-tv 2.3s ease-in-out infinite; }
@@ -1453,32 +1455,31 @@ section.section-grid .heading-secondary {
 .banner .icon-css {
   position: absolute;
   padding-top: 21rem;
-  left: 49%;
-  margin-left: -200px;
-  z-index: 20000;
+  margin-left: 200px;
+  z-index: -1;
   opacity: .3; }
   .banner .icon-css .img-css {
-    animation: float-css 2.1s ease-in-out infinite; }
+    animation: float-css 3.1s ease-in-out infinite; }
 
 .banner .icon-mouse {
   position: absolute;
   padding-top: 24rem;
   left: 52%;
   margin-left: -200px;
-  z-index: 10001;
+  z-index: -1;
   opacity: .3; }
   .banner .icon-mouse .img-mouse {
-    animation: float-mouse 2.2s ease-in-out infinite; }
+    animation: float-mouse 2.7s ease-in-out infinite; }
 
 .banner .icon-git {
   position: absolute;
   padding-top: 24rem;
   left: 36%;
   margin-left: -200px;
-  z-index: 10001;
+  z-index: -1;
   opacity: .3; }
   .banner .icon-git .img-git {
-    animation: float-git 2.1s ease-in-out infinite; }
+    animation: float-git 2.9s ease-in-out infinite; }
 
 @keyframes float-js {
   0% {
@@ -1486,6 +1487,8 @@ section.section-grid .heading-secondary {
     opacity: 0.0; }
   18% {
     opacity: 0.5; }
+  50% {
+    opacity: 0.75; }
   85% {
     opacity: 0.5; }
   100% {
@@ -1494,10 +1497,12 @@ section.section-grid .heading-secondary {
 
 @keyframes float-css {
   0% {
-    transform: translateY(0px);
+    transform: translateY(60px);
     opacity: 0.0; }
   22% {
     opacity: 0.5; }
+  54% {
+    opacity: 0.75; }
   85% {
     opacity: 0.5; }
   100% {
@@ -1506,14 +1511,16 @@ section.section-grid .heading-secondary {
 
 @keyframes float-mouse {
   0% {
-    transform: translateY(0px);
+    transform: translateY(70px);
     opacity: 0.0; }
   45% {
     opacity: 0.5; }
+  60% {
+    opacity: 0.75; }
   90% {
     opacity: 0.5; }
   100% {
-    transform: translateY(-40px);
+    transform: translateY(-70px);
     opacity: 0.0; } }
 
 @keyframes float-git {
@@ -1522,22 +1529,26 @@ section.section-grid .heading-secondary {
     opacity: 0.0; }
   20% {
     opacity: 0.5; }
+  60% {
+    opacity: 0.45; }
   90% {
-    opacity: 0.5; }
+    opacity: 0.25; }
   100% {
     transform: translateY(-90px);
     opacity: 0.0; } }
 
 @keyframes float-tv {
   0% {
-    transform: translateY(0px);
+    transform: translateY(75px);
     opacity: 0.0; }
   20% {
     opacity: 0.5; }
+  45% {
+    opacity: 0.45; }
   80% {
-    opacity: 0.5; }
+    opacity: 0.25; }
   100% {
-    transform: translateY(-50px);
+    transform: translateY(-80px);
     opacity: 0.0; } }
 
 section.section-jobs .pk-card {
@@ -1985,42 +1996,69 @@ div.exp {
       font-size: 1.4rem;
       color: #000; }
 
-section.section-where .card-container {
-  display: flex;
-  margin-top: 15rem; }
-
-section.section-where .loc {
-  width: 25rem;
-  height: 30rem;
-  transition: all 0.4s ease;
-  z-index: 1;
+section.section-where .location-card {
+  font-family: 'Varela Round', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  justify-content: space-around;
+  margin-top: 15rem;
   color: white;
   font-size: 1.6rem;
-  font-weight: 700;
-  height: 20vh; }
-  section.section-where .loc .state {
+  font-weight: 700; }
+
+section.section-where .loc {
+  position: relative;
+  width: 30rem;
+  height: 35rem;
+  transition: all 0.4s ease;
+  z-index: 1;
+  border-radius: 25px;
+  margin: 0 auto;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border-bottom: 2px solid #3a3a3a;
+  border-left: 2px solid #3a3a3a; }
+  section.section-where .loc .meHead {
     position: absolute;
     text-align: center;
+    margin: 15px 0 0 15px;
     font-size: 3rem;
-    font-weight: 300; }
-  section.section-where .loc span.temp {
+    font-weight: 400;
+    text-shadow: 4px 4px 6px black;
+    z-index: 1000; }
+  section.section-where .loc span.meMinor {
     position: absolute;
+    top: 55%;
+    left: 1.5vh;
+    padding-right: 5px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5; }
+  section.section-where .loc span.meLine {
+    position: absolute;
+    left: 0;
     top: 50%;
-    right: 5vh;
-    font-size: 2.5rem;
-    font-weight: 500; }
-  section.section-where .loc .city {
-    left: 5vh;
-    top: 50%;
-    margin-top: 2.5rem;
-    font-size: 0;
-    line-height: 2.5rem;
-    font-weight: 100; }
+    height: 10px;
+    width: 80vw;
+    background-color: #fff;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25); }
+  section.section-where .loc .meVideo {
+    position: absolute;
+    display: block;
+    height: 50%;
+    left: -8px;
+    top: 0;
+    z-index: -1; }
+  section.section-where .loc img.mePicture {
+    position: absolute;
+    top: -19px;
+    width: 305px; }
   section.section-where .loc:first-child {
-    background-color: rgba(51, 122, 183, 0.7); }
+    background-color: rgba(227, 181, 5, 0.7); }
   section.section-where .loc:nth-child(2) {
-    background-color: rgba(212, 48, 42, 0.7); }
+    background-color: rgba(149, 25, 12, 0.7); }
   section.section-where .loc:nth-child(3) {
-    background-color: rgba(249, 165, 35, 0.7); }
+    background-color: rgba(4, 75, 127, 0.7); }
   section.section-where .loc:last-child {
-    background-color: rgba(253, 194, 18, 0.7); }
+    background-color: rgba(16, 126, 125, 0.7); }

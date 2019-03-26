@@ -20,6 +20,9 @@ body {
     &.color5 {
         background-image: linear-gradient(to bottom right, $brite6, $brite3);
     }
+    &.color6 {
+        background-image: linear-gradient(to bottom right, $color-white, $soft4);
+    }
 }
 
 section.section-facts {

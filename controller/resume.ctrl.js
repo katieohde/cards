@@ -1,5 +1,5 @@
 angular.module('app.core').controller('resumeController', ['$scope', function($scope) {
-    var vm = this;
+    
     $scope.footerDetails = 'Built with: AngularJS, SASS';
     $scope.resume = {
         id: 'kohde',
@@ -28,5 +28,6 @@ angular.module('app.core').controller('resumeController', ['$scope', function($s
         workSite: 'www.prokarma.com',
         viewResume: false
     }
+
 
 }]);

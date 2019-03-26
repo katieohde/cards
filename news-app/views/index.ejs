@@ -1,0 +1,9 @@
+var unirest = require('unirest');
+
+unirest.get("https://community-hacker-news-v1.p.rapidapi.com/topstories.json?print=pretty")
+.header("X-RapidAPI-Key", "d5f132d0abmshd0942b2863e0e04p110507jsnce35aa5516be")
+.end(function (result) {
+  console.log(result.status, result.headers, result.body);
+
+
+  XHR.onready

@@ -26,6 +26,10 @@
   },
   "dependencies": {
     "@uirouter/angularjs": "^1.0.22",
-    "popper.js": "^1.14.7"
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "hacker-news-api": "^2.0.0",
+    "popper.js": "^1.14.7",
+    "unirest": "^0.6.0"
   }
 }
