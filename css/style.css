@@ -1934,6 +1934,10 @@ section.section-where .loc {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.5; }
+    section.section-where .loc span.meMinor ~ p {
+      position: absolute;
+      left: 47%;
+      bottom: 5px; }
   section.section-where .loc span.meLine {
     position: absolute;
     left: 0;

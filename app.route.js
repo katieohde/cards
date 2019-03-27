@@ -67,6 +67,6 @@ angular
                 controller: 'gridController'
             })
             .otherwise({
-                redirectTo: '/comment'
+                redirectTo: '/whereWe'
             });
     }
